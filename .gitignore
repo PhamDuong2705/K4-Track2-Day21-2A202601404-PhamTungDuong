@@ -1,0 +1,13 @@
+mlflow.db
+mlartifacts/
+models/
+outputs/
+data/train_batch1.csv
+data/holdout.csv
+data/train_batch2.csv
+sa-key.json
+.env
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
