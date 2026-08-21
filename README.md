@@ -233,6 +233,10 @@ pyyaml==6.0.1
 
 ## Hướng Dẫn Lab
 
+> Repo này triển khai trên **AWS S3 + EC2**. Cấu hình bootstrap EC2, IAM policy,
+> GitHub Secrets và lệnh kiểm tra production nằm tại
+> [`deploy/README.md`](deploy/README.md).
+
 | Bước | Nội dung | File hướng dẫn |
 |---|---|---|
 | 1 | Thực nghiệm cục bộ và theo dõi bằng MLflow | tasks/buoc-1.md |

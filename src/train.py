@@ -13,6 +13,11 @@ from sklearn.metrics import accuracy_score, f1_score
 # "thu nhap thap" cho moi mau da dat accuracy 0.75 ma khong hoc duoc gi.
 F1_THRESHOLD = 0.65
 
+# Use the SQLite backend by default so local runs and CI do not depend on a
+# partially copied `mlruns/` directory. An explicit remote URI still wins.
+if not os.environ.get("MLFLOW_TRACKING_URI"):
+    mlflow.set_tracking_uri("sqlite:///mlflow.db")
+
 
 def train(
     params: dict,

@@ -1,5 +1,6 @@
 import os
 import json
+import mlflow
 import numpy as np
 import pandas as pd
 from src.train import train
@@ -19,6 +20,9 @@ def _make_temp_data(tmp_path):
     Ham nay dung du lieu ngau nhien nen khong can ket noi cloud storage hay tai file CSV thuc.
     """
     rng = np.random.default_rng(0)
+    # Keep test runs out of the learner's real MLflow experiment database.
+    tracking_db = (tmp_path / "mlflow-test.db").as_posix()
+    mlflow.set_tracking_uri(f"sqlite:///{tracking_db}")
 
     n = 200
 

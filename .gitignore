@@ -1,4 +1,5 @@
 mlflow.db
+mlruns/
 mlartifacts/
 models/
 outputs/
@@ -7,6 +8,7 @@ data/holdout.csv
 data/train_batch2.csv
 sa-key.json
 .env
+.secrets/
 .venv/
 __pycache__/
 *.pyc
