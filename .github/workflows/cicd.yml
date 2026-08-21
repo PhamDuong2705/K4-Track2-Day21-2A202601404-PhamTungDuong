@@ -16,6 +16,7 @@ on:
       - 'tests/**.py'
       - 'params.yaml'
       - 'requirements.txt'
+      - 'deploy/**'
       - '.github/workflows/cicd.yml'
   pull_request:
     branches: [main]
