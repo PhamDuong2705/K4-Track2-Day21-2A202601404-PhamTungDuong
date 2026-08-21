@@ -11,7 +11,13 @@ fi
 
 ARTIFACT_BUCKET="$1"
 REPOSITORY_URL="${2:-https://github.com/PhamDuong2705/K4-Track2-Day21-2A202601404-PhamTungDuong.git}"
-APP_USER="${SUDO_USER:-$USER}"
+if [[ -n "${SUDO_USER:-}" && "$SUDO_USER" != "root" ]]; then
+  APP_USER="$SUDO_USER"
+elif id ubuntu >/dev/null 2>&1; then
+  APP_USER="ubuntu"
+else
+  APP_USER="$USER"
+fi
 APP_HOME="$(getent passwd "$APP_USER" | cut -d: -f6)"
 APP_DIR="$APP_HOME/income-api"
 
