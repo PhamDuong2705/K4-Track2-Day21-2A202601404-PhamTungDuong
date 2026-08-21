@@ -647,7 +647,14 @@ Nguyên nhân phổ biến:
 - `curl http://VM_IP:8080/score` trả về kết quả dự đoán hợp lệ.
 - Cloud Storage Console hiển thị file dữ liệu dưới `dvc/` và file model dưới `artifacts/current/model.joblib`.
 
-Chụp màn hình tab Actions hiển thị cả bốn jobs màu xanh (cần nộp bài).
+Chụp ba ảnh nộp bài, lưu vào `nop-bai/anh-chup-man-hinh/` (yêu cầu chi tiết:
+[nop-bai/anh-chup-man-hinh/README.md](../nop-bai/anh-chup-man-hinh/README.md)):
+
+| Tên file | Nội dung cần thấy rõ |
+|---|---|
+| `02-actions-buoc-2.png` | Tab Actions với cả bốn jobs màu xanh |
+| `04-curl-api.png` | Terminal chứa cả hai lệnh `curl` và kết quả trả về, thấy rõ IP của VM |
+| `05-cloud-storage.png` | Console hiển thị `dvc/` và `artifacts/current/model.joblib` |
 
 ---
 

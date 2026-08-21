@@ -191,10 +191,24 @@ Bước 3 - Huấn luyện liên tục
 
 ## Kết Quả Cần Đạt - Bước 3
 
-- Chụp màn hình một lần chạy GitHub Actions được kích hoạt bởi commit dữ liệu.
+- Chụp màn hình một lần chạy GitHub Actions được kích hoạt bởi commit dữ liệu, lưu thành
+  `nop-bai/anh-chup-man-hinh/03-actions-buoc-3.png`.
   Xác nhận: commit message hiển thị trong tên của lần chạy Actions là commit dữ liệu của bạn.
 - Cả bốn jobs (Unit Test, Train, Quality Gate, Release) đều hoàn thành thành công.
 - So sánh f1_score giữa Bước 2 và Bước 3 đã được điền vào bảng ở mục 3.6, kèm giải thích.
+
+---
+
+## Hoàn Tất Hồ Sơ Nộp Bài
+
+Đến đây bạn đã có đủ dữ liệu để hoàn thiện phần nộp bài:
+
+1. Kiểm tra đủ 5 ảnh trong [nop-bai/anh-chup-man-hinh/](../nop-bai/anh-chup-man-hinh/),
+   đúng tên file và đúng thứ tự.
+2. Điền nốt [nop-bai/bao-cao.md](../nop-bai/bao-cao.md) — đặc biệt là mục 4 (so sánh Bước 2
+   và Bước 3), rồi xóa toàn bộ các khối chú thích hướng dẫn và kiểm tra báo cáo không vượt
+   quá 1 trang A4.
+3. Đi hết checklist trong [nop-bai/README.md](../nop-bai/README.md) trước khi `git push`.
 
 ---
 

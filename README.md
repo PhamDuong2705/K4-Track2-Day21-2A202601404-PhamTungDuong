@@ -145,7 +145,7 @@ Ty le lop >50K   : 24.8%
 Cấu trúc này là kết quả cuối cùng sau khi hoàn thành cả ba bước:
 
 ```
-mlops-lab/
+<thu-muc-goc-cua-repo>/
 ├── .github/
 │   └── workflows/
 │       └── cicd.yml           <- Pipeline CI/CD (Bước 2)
@@ -162,6 +162,9 @@ mlops-lab/
 ├── tests/
 │   ├── __init__.py
 │   └── test_train.py          <- Unit test (Bước 2)
+├── nop-bai/                   <- Bằng chứng nộp bài (đã cung cấp sẵn khung)
+│   ├── bao-cao.md             <- Template báo cáo, không quá 1 trang A4
+│   └── anh-chup-man-hinh/     <- Chuỗi ảnh 01 -> 05 theo thứ tự
 ├── prepare_data.py            <- Script tạo dữ liệu (đã cung cấp)
 ├── append_batch.py            <- Script thêm dữ liệu mới (đã cung cấp)
 ├── params.yaml                <- Siêu tham số mô hình
@@ -178,7 +181,7 @@ mlops-lab/
 ```bash
 # 1. Clone hoặc khởi tạo repo của bạn
 git clone <URL_REPO_CUA_BAN>
-cd mlops-lab
+cd <TEN_THU_MUC_REPO>          # thư mục vừa được clone ra
 
 # 2. Tạo và kích hoạt môi trường ảo
 python -m venv .venv
@@ -267,18 +270,35 @@ Bắt đầu từ [Bước 1](tasks/buoc-1.md).
 
 ### Hướng dẫn nộp bài
 
-Nộp các hạng mục sau:
+Toàn bộ bằng chứng nộp bài nằm trong thư mục [nop-bai/](nop-bai/) — khung thư mục và
+template đã có sẵn trong repo, bạn chỉ cần điền vào và commit.
 
-1. URL repo GitHub công khai chứa toàn bộ code và cấu hình.
-2. Chuỗi chụp màn hình theo thứ tự:
-   - MLflow UI hiển thị ít nhất 3 thí nghiệm.
-   - GitHub Actions tab hiển thị cả bốn jobs màu xanh (Bước 2 và Bước 3).
-   - Kết quả của lệnh `curl http://VM_IP:8080/healthz` và `curl http://VM_IP:8080/score`.
-   - Cloud Storage Console hiển thị các file dữ liệu và model đã được upload lên.
-3. File báo cáo ngắn (không quá 1 trang A4) ghi lại:
-   - Bộ siêu tham số đã chọn và lý do (kết quả Bước 1).
-   - Giải thích vì sao ngưỡng chất lượng của lab đặt trên F1 chứ không phải accuracy.
-   - Bất kỳ khó khăn nào gặp phải và cách giải quyết.
+**1. URL repo GitHub công khai** chứa toàn bộ code, cấu hình và thư mục `nop-bai/` đã điền.
+Đây là thứ duy nhất bạn nộp: dán link repo vào bài nộp tương ứng trên
+**https://codelabs.vlearn.dev**. Ảnh chụp màn hình và báo cáo được chấm trực tiếp trong repo,
+không nộp rời.
+
+**2. Chuỗi chụp màn hình theo thứ tự** — đặt trong [nop-bai/anh-chup-man-hinh/](nop-bai/anh-chup-man-hinh/),
+đúng tên file dưới đây (yêu cầu chi tiết của từng ảnh xem tại
+[nop-bai/anh-chup-man-hinh/README.md](nop-bai/anh-chup-man-hinh/README.md)):
+
+| Thứ tự | Tên file | Nội dung |
+|---|---|---|
+| 1 | `01-mlflow-ui.png` | MLflow UI hiển thị ít nhất 3 thí nghiệm, thấy rõ cả `f1_score` và `accuracy` |
+| 2 | `02-actions-buoc-2.png` | GitHub Actions tab hiển thị cả bốn jobs màu xanh (Bước 2) |
+| 3 | `03-actions-buoc-3.png` | GitHub Actions của lần chạy do commit dữ liệu kích hoạt (Bước 3) |
+| 4 | `04-curl-api.png` | Kết quả `curl http://VM_IP:8080/healthz` và `curl http://VM_IP:8080/score` |
+| 5 | `05-cloud-storage.png` | Cloud Storage Console hiển thị dữ liệu `dvc/` và model đã upload |
+
+**3. File báo cáo ngắn** (không quá 1 trang A4) — điền vào template
+[nop-bai/bao-cao.md](nop-bai/bao-cao.md), gồm:
+
+- Bộ siêu tham số đã chọn và lý do (kết quả Bước 1).
+- Giải thích vì sao ngưỡng chất lượng của lab đặt trên F1 chứ không phải accuracy.
+- Bất kỳ khó khăn nào gặp phải và cách giải quyết.
+- So sánh `f1_score` giữa Bước 2 và Bước 3 kèm nhận xét.
+
+Checklist đầy đủ trước khi nộp: [nop-bai/README.md](nop-bai/README.md).
 
 ---
 

@@ -250,7 +250,12 @@ Trước khi chuyển sang Bước 2, kiểm tra các điểm sau:
 - MLflow UI hiển thị ít nhất 3 lần chạy với các siêu tham số khác nhau.
 - `params.yaml` đã được cập nhật với bộ siêu tham số tốt nhất, đạt `f1_score >= 0.65`.
 
-Chụp màn hình MLflow UI (cần nộp bài).
+Chụp màn hình MLflow UI và lưu thành `nop-bai/anh-chup-man-hinh/01-mlflow-ui.png`
+(yêu cầu chi tiết của ảnh: [nop-bai/anh-chup-man-hinh/README.md](../nop-bai/anh-chup-man-hinh/README.md)).
+
+Ghi ngay bộ siêu tham số tốt nhất và các số liệu so sánh vào mục 1 của
+[nop-bai/bao-cao.md](../nop-bai/bao-cao.md) — làm lúc này dễ hơn nhiều so với việc nhớ lại
+sau khi đã hoàn thành cả ba bước.
 
 ---
 
