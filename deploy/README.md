@@ -14,6 +14,15 @@ Repo dùng bucket `income-cicd-394877251429` và region mặc định
 
 ## 2. Khởi tạo VM một lần
 
+Nếu máy đã cấu hình AWS credentials với quyền EC2/IAM, có thể tạo toàn bộ IAM
+instance role, key pair, security group và EC2 một cách idempotent bằng:
+
+```bash
+python deploy/provision_aws.py
+```
+
+Hoặc khởi tạo thủ công trên một EC2 có sẵn như sau.
+
 SSH vào VM, clone repo rồi chạy:
 
 ```bash
